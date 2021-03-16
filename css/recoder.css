@@ -1,0 +1,46 @@
+body{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#gum{
+    margin-top: 55px;
+    margin-bottom: 55px;
+    border: 1px solid #000;
+    box-shadow: 2px 2px 2px 2px rgb(0,0,0,0.5);
+}
+
+button {
+    margin: 0 3px 10px 0;
+    padding: 6px;
+  }
+  
+  button:last-of-type {
+    margin: 0;
+  }
+  
+  p.borderBelow {
+    margin: 0 0 20px 0;
+    padding: 0 0 20px 0;
+  }
+  
+  video {
+    vertical-align: top;
+    --width: 25vw;
+    width: var(--width);
+    height: calc(var(--width) * 0.5625);
+  }
+  
+  video:last-of-type {
+    margin: 0 0 20px 0;
+  }
+  
+  video#gumVideo {
+    margin: 0 20px 20px 0;
+  }
+
+  #echoCancellation{
+      margin-top: 35px;
+  }
+  

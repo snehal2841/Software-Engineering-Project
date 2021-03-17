@@ -4,11 +4,15 @@ body{
     text-align: center;
 }
 
-#gum{
+#gum, #recorded{
     margin-top: 55px;
-    margin-bottom: 55px;
+    /* margin-bottom: 55px; */
     border: 1px solid #000;
     box-shadow: 2px 2px 2px 2px rgb(0,0,0,0.5);
+}
+
+.btns{
+  margin-top: 50px;
 }
 
 button {
@@ -27,7 +31,7 @@ button {
   
   video {
     vertical-align: top;
-    --width: 25vw;
+    --width: 35vw;
     width: var(--width);
     height: calc(var(--width) * 0.5625);
   }

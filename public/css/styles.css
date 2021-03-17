@@ -10040,6 +10040,7 @@ hr.light {
   }
   #mainNav .navbar-brand {
     color: rgba(255, 255, 255, 0.7);
+    font-size: 25px;
   }
   #mainNav .navbar-brand:hover {
     color: #fff;
@@ -10047,6 +10048,7 @@ hr.light {
   #mainNav .navbar-nav .nav-item .nav-link {
     color: rgba(255, 255, 255, 0.7);
     padding: 0 1rem;
+    font-size: 18px;
   }
   #mainNav .navbar-nav .nav-item .nav-link:hover {
     color: #fff;

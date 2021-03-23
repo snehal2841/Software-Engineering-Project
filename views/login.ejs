@@ -1,17 +1,37 @@
 <%- include('./partials/header') %>
 
-<h2>Login Here</h2>
+    <link rel="stylesheet" type="text/css" href="/css/login.css">
 
-<form action="/login" method="POST" class="validated-form" novalidate>
-    <div class="mb-3">
-        <label class="form-label" for="username">Username</label>
-        <input class="form-control" type="text" id="username" name="username" required>
+    <div class="inside_form">
+        <div class="overlay">
+            <form action="/login" method="POST" class="validated-form" novalidate>
+                <div>
+                    <h2>SIGN IN</h2>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="username">USERNAME</label>
+                    <input class="form-control" type="text" id="username" name="username" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="password">PASSWORD</label>
+                    <input class="form-control" type="password" id="password" name="password" required>
+                </div>
+                <div class="mb-3">
+                    <input id="check" type="checkbox" class="check" checked>
+                    <label for="check"><span class="icon"></span> Keep me Signed in</label>
+                </div>
+                <div>
+                    <input type="submit" class="button" value="SIGN IN">
+                </div>
+                <div class="mb-5 mt-5">
+                    <hr>
+                </div>
+                <div class="ForgotPassword">
+                    <a href="#forgot">Forgot Password?</a>
+                </div>
+            </form>
+        </div>
     </div>
-    <div class="mb-3">
-        <label class="form-label" for="password">Password</label>
-        <input class="form-control" type="password" id="password" name="password" required>
-    </div>
-    <button class="btn btn-success">Login</button>
-</form>
 
-<%- include('./partials/footer') %>
+
+    <%- include('./partials/footer') %>

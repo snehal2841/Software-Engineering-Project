@@ -7,13 +7,13 @@ function createRoom(){
     console.log("Creating Room")
     let room = document.getElementById("room-input").value;
     if(room == " " || room == "")   {
-        alert("Please enter room number")
+        alert("Please enter video ID")
         return;
     }
     room_id = PRE+room+SUF;
     let peer = new Peer(room_id)
     peer.on('open', (id)=>{
-        console.log("Peer Connected with ID: ", id)
+        console.log("Video tracking with ID: ", id)
         hideModal()
         getUserMedia({video: true, audio: true}, (stream)=>{
             local_stream = stream;
@@ -21,7 +21,7 @@ function createRoom(){
         },(err)=>{
             console.log(err)
         })
-        notify("Waiting for peer to join.")
+        notify("Waiting for video to connect.")
     })
     peer.on('call',(call)=>{
         call.answer(local_stream);

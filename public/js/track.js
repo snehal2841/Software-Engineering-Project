@@ -15,6 +15,7 @@ function createRoom(){
     peer.on('open', (id)=>{
         console.log("Video tracking with ID: ", id)
         hideModal()
+        hideRemote()
         getUserMedia({video: true, audio: true}, (stream)=>{
             local_stream = stream;
             setLocalStream(local_stream)
@@ -49,6 +50,14 @@ function hideModal(){
     document.getElementById("entry-modal").hidden = true
 }
 
+function hideLocal(){
+    document.getElementById("local-video").hidden = true
+}
+
+function hideRemote(){
+    document.getElementById("remote-video").hidden = true
+}
+
 function notify(msg){
     let notification = document.getElementById("notification")
     notification.innerHTML = msg
@@ -67,6 +76,7 @@ function joinRoom(){
     }
     room_id = PRE+room+SUF;
     hideModal()
+    hideLocal()
     let peer = new Peer()
     peer.on('open', (id)=>{
         console.log("Connected with Id: "+id)

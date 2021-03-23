@@ -54,7 +54,7 @@ div button{
     padding: 5px;
 }
 
-#remote-video{
+#remote-video, #local-video{
     top: 0;
     height: 100%;
     width: 100%;
@@ -63,7 +63,7 @@ div button{
     position: absolute;
 }
 
-#local-video{
+/* #local-video{
     top: 60;
     width: 300;
     object-fit: cover;
@@ -72,4 +72,4 @@ div button{
     right: 15;
     background-color: #444444;
     position: absolute;
-}
+} */

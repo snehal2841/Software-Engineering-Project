@@ -1,5 +1,5 @@
-const PRE = "no"
-const SUF = "va"
+const PRE = ""
+const SUF = ""
 var room_id;
 var getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
 var local_stream;
@@ -13,7 +13,7 @@ function createRoom(){
     room_id = PRE+room+SUF;
     let peer = new Peer(room_id)
     peer.on('open', (id)=>{
-        console.log("Video tracking with ID: ", id)
+        console.log("Video recording with ID: ", id)
         hideModal()
         hideRemote()
         getUserMedia({video: true, audio: true}, (stream)=>{

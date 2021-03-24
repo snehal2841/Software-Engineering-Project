@@ -1,0 +1,36 @@
+<%- include('./partials/header') %>
+
+<link rel="stylesheet" href="css/newVideo.css">
+
+<title>Nova- New Video</title>
+
+<div class="container">
+    <h2>Add a new Video</h2>
+<form action="/profile" method="POST">
+    <div>
+        <label for="">
+            <input type="text" id="vid" placeholder="Video url" name="video[vid]">
+        </label>
+    </div>
+    <div>
+        <label for="">
+            <input type="text" id="vid_id" placeholder="Video ID" name="video[vid_id]">
+        </label>
+    </div>
+    <div>
+        <label for="">
+            <input type="date" id="date" placeholder="Video Date" name="video[date]">
+        </label>
+    </div>
+    <div>
+        <label for="">
+            <input type="text" id="location" placeholder="Video Location" name="video[location]">
+        </label>
+    </div>
+
+    <button class="btn btn-success">Add Video</button>
+</form>
+</div>
+
+
+<%- include('./partials/footer') %>

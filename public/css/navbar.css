@@ -1,11 +1,15 @@
-nav #mainNav #navBar{
+nav #mainNav #navBar {
     margin: 0rem 10rem !important;
     height: 7rem;
 }
 
 #mainNav {
     padding: 1rem !important;
-    background-color: #6593A6;
+}
+
+#mainNav.navbar-scrolled {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    background-color: #000000;
 }
 
 .navbar .navbar-brand {
@@ -15,6 +19,7 @@ nav #mainNav #navBar{
     padding-right: 5rem !important;
     padding-bottom: 0 !important;
 }
+
 .navbar .navbar-brand:hover {
     color: #FFFFFFB3 !important;
 }
@@ -23,6 +28,12 @@ nav #mainNav #navBar{
     font-size: 1rem !important;
     font-weight: 80 !important;
 }
+
+/* @media (max-width:993px) {
+    .navbar .navbar-scrolled .navbar-brand .js-scroll-trigger{
+        color: rgba(255, 255, 255, 0.7) !important;
+    }
+} */
 
 @media (max-width:400px) {
     .navbar .navbar-brand {

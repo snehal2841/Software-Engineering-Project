@@ -1,12 +1,15 @@
-const express = require("express"),
-    mongoose = require("mongoose"),
-    methodOverride = require("method-override"),
-    bodyParser = require("body-parser"),
-    flash = require("connect-flash");
+const express = require("express");
+const path = require("path");
+const mongoose = require("mongoose");
+const methodOverride = require("method-override");
+const bodyParser = require("body-parser");
+const flash = require("connect-flash");
 const passport = require("passport");
 const LocalStrategy = require("passport-local");
 const { session } = require("passport");
 const User = require("./models/user");
+const Video = require("./models/video");
+// const fs=require("fs");
 
 const userRoutes = require("./routes/users");
 const app = express();
@@ -15,7 +18,7 @@ require('dotenv').config();
 //PASSPORT CONFIGURATION
 app.use(
     require("express-session")({
-      secret: "Nothing is Greater than LOVE!!!",
+      secret: "Stay secured",
       resave: false,
       saveUninitialized: false,
     })
@@ -60,22 +63,45 @@ app.get("/", (req, res) => {
     res.render("home");
 });
 
-app.get("/signup", (req, res) => {
-    res.render("signup");
+app.get("/about", (req, res) => {
+    res.render("about");
 });
 
-app.get("/login", (req, res) => {
-    res.render("login");
-});
+// app.get("/signup", (req, res) => {
+//     res.render("signup");
+// });
+
+// app.get("/login", (req, res) => {
+//     res.render("login");
+// });
 
 app.get("/record", (req, res) => {
     res.render("recorder");
 });
 
-app.get("/profile",(req,res) =>{
-    res.render("profile")
-});
 
+app.get("/profile",async(req,res) =>{
+    res.render("profile");
+    // const vid = new Video({vid_id: 'no48va', location: 'Market Yard'});
+    // await vid.save();
+    // res.send(vid);
+}); 
+
+// app.post("/profile",async(req,res) =>{
+//     res.send(req.body); 
+// });
+
+// app.get("/new",(req,res) =>{
+//     res.render("newVideo");
+// });
+
+app.get("/track",(req,res) =>{
+    //  res.writeHead(200, {'Content-Type':'video/mp4'});
+    //  var rs=fs.createReadStream('video.mp4');
+    //  rs.pipe(res);
+    res.render("track");
+ });
+ 
 
 let port = process.env.PORT || 8000
 app.listen(port, process.env.IP, () => {

@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 .profile-container {
-    background-color: rgb(160, 197, 252);
+    background: #F7F8F8;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ACBB78, #F7F8F8);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom right, #ACBB78, #F7F8F8) fixed;
     font-family: 'Muli', sans-serif;
     display: block;
     align-items: center;

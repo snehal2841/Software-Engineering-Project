@@ -33,6 +33,10 @@ header.masthead h1 {
   }
 }
 
+#about {
+  background-color: rgb(155, 179, 192);
+}
+
 #portfolio .container-fluid, #portfolio .container-sm, #portfolio .container-md, #portfolio .container-lg, #portfolio .container-xl {
   max-width: 1920px;
 }

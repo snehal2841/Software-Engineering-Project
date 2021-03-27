@@ -59,6 +59,7 @@ app.use(express.static(__dirname + "/public"));
 
 app.use('/', userRoutes);
 
+
 app.get("/", (req, res) => {
     res.render("home");
 });
@@ -67,13 +68,6 @@ app.get("/about", (req, res) => {
     res.render("about");
 });
 
-// app.get("/signup", (req, res) => {
-//     res.render("signup");
-// });
-
-// app.get("/login", (req, res) => {
-//     res.render("login");
-// });
 
 app.get("/record", (req, res) => {
     res.render("recorder");
@@ -81,20 +75,36 @@ app.get("/record", (req, res) => {
 
 
 app.get("/videos",async(req,res) =>{
-    const videos = await Video.find({});
-    res.render("profile");
-    // const vid = new Video({vid_id: 'no48va', location: 'Market Yard'});
-    // await vid.save();
-    // res.send(vid);
+    Video.find({}, function(err, allVideos) {
+        if(err) {
+            console.log(err);
+        } else {
+            //console.log(allVideos);
+            res.render("profile", {videos:allVideos});
+        }
+    });
 }); 
 
-// app.post("/profile",async(req,res) =>{
-//     res.send(req.body); 
-// });
+app.get("/newVid", (req,res) =>{
+    res.render("newVid");
+});
 
-// app.get("/new",(req,res) =>{
-//     res.render("newVideo");
-// });
+app.post("/videos", (req,res) =>{
+    var vid_url_id=req.body.vid_url_id;
+	var vid_id=req.body.vid_id;
+	var date=req.body.date;
+	var location=req.body.location;
+	var newVideo={vid_url_id: vid_url_id, vid_id: vid_id, date:date, location:location}
+    Video.create(newVideo,function(err,newlyCreated){
+		if(err){
+			console.log(err);
+		}
+		else{
+			res.redirect("/videos");
+		}
+        //console.log(req.body);
+	});
+});
 
 app.get("/track",(req,res) =>{
     res.render("track");

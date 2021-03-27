@@ -7,7 +7,7 @@
             <div class="course-preview">
                 <img src="/assets/img/pp.png" alt="Profile Picture" width="100%" height="100%">
             </div>
-            <div class="course-info">        
+            <div class="course-info">      
                 <table style="width:100%">
                     <tr>
                         <td class="td-1">Username </td>
@@ -18,35 +18,40 @@
                         <td class="td-1">Email-id </td>
                         <td>: </td>
                         <td class="td-3"><%= currentUser.email %> </td>
-                    </tr> 
+                    </tr>
                 </table>
+                <tr>
+                    <a href="/newVid"><button class="btn btn-warning">Add Video</button></a>
+                </tr> 
             </div>
         </div>
 
         <h1 style="margin-bottom:20px; color: rgb(95, 95, 95);">Recorded Videos</h1>
-        <div class="main">
+        <hr style="width: 20%;">
+        <div class="main"> 
+            <% videos.forEach(function(video){ %>
             <ul class="cards">
                 <li class="cards_item">
                     <div class="card">
                         <iframe id="rec-frame" allowfullscreen style="border:none;"
-                            src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+                            src="https://www.youtube.com/embed/<%= video.vid_url_id %>"></iframe> 
                         <div class="card_content">
                             <div class="card_text">
                                 <table style="width:100%">
                                     <tr>
                                         <td>Video-ID </td>
                                         <td>: </td>
-                                        <td class="td3">x68sdb</td>
+                                        <td class="td3"><%= video.vid_id %> </td>
                                     </tr>
                                     <tr>
                                         <td>Date </td>
                                         <td>: </td>
-                                        <td class="td3">25-06-2020</td>
+                                        <td class="td3"><%= video.date %> </td>
                                     </tr>
                                     <tr>
                                         <td>Location </td>
                                         <td>: </td>
-                                        <td class="td3">Market Yrd</td>
+                                        <td class="td3"><%= video.location %> </td>
                                     </tr>
                                 </table>
                             </div>
@@ -54,6 +59,7 @@
                     </div>
                 </li>   
             </ul>
+            <% }) %>
         </div>
     </div>
 

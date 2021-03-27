@@ -1,7 +1,5 @@
 'use strict';
 
-/* globals MediaRecorder */
-
 let mediaRecorder;
 let recordedBlobs;
 
@@ -9,6 +7,7 @@ const errorMsgElement = document.querySelector('span#errorMsg');
 const recordedVideo = document.querySelector('video#recorded');
 const recordButton = document.querySelector('button#record');
 const playButton = document.querySelector('button#play');
+const saveButton = document.querySelector('button#save');
 const downloadButton = document.querySelector('button#download');
 
 
@@ -20,6 +19,7 @@ recordButton.addEventListener('click', () => {
     recordButton.textContent = 'Record';
     playButton.disabled = false;
     downloadButton.disabled = false;
+    saveButton.disabled = false;
   }
 });
 
@@ -32,6 +32,12 @@ playButton.addEventListener('click', () => {
   recordedVideo.controls = true;
   recordedVideo.play();
 });
+
+saveButton.addEventListener('click', () => {
+  const blob = new Blob(recordedBlobs, {type: 'video/mp4'});
+  const url = window.URL.createObjectURL(blob);
+  console.log(url);
+ });
 
 
 downloadButton.addEventListener('click', () => {
@@ -47,6 +53,7 @@ downloadButton.addEventListener('click', () => {
     document.body.removeChild(a);
     window.URL.revokeObjectURL(url);
   }, 100);
+  console.log(url);
 });
 
 function handleDataAvailable(event) {
@@ -71,6 +78,7 @@ function startRecording() {
   recordButton.textContent = 'Stop Recording';
   playButton.disabled = true;
   downloadButton.disabled = true;
+  saveButton.disabled = true;
   mediaRecorder.onstop = (event) => {
     console.log('Recorder stopped: ', event);
     console.log('Recorded Blobs: ', recordedBlobs);
@@ -116,3 +124,4 @@ document.querySelector('button#start').addEventListener('click', async () => {
   console.log('Using media constraints:', constraints);
   await init(constraints);
 });
+

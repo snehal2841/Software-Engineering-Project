@@ -1,4 +1,5 @@
 const express = require("express");
+const app = express();
 const path = require("path");
 const mongoose = require("mongoose");
 const methodOverride = require("method-override");
@@ -12,7 +13,6 @@ const Video = require("./models/video");
 // const fs=require("fs");
 
 const userRoutes = require("./routes/users");
-const app = express();
 require('dotenv').config();
 
 //PASSPORT CONFIGURATION
@@ -80,7 +80,8 @@ app.get("/record", (req, res) => {
 });
 
 
-app.get("/profile",async(req,res) =>{
+app.get("/videos",async(req,res) =>{
+    const videos = await Video.find({});
     res.render("profile");
     // const vid = new Video({vid_id: 'no48va', location: 'Market Yard'});
     // await vid.save();
@@ -96,12 +97,9 @@ app.get("/profile",async(req,res) =>{
 // });
 
 app.get("/track",(req,res) =>{
-    //  res.writeHead(200, {'Content-Type':'video/mp4'});
-    //  var rs=fs.createReadStream('video.mp4');
-    //  rs.pipe(res);
     res.render("track");
  });
- 
+
 
 let port = process.env.PORT || 8000
 app.listen(port, process.env.IP, () => {

@@ -20,7 +20,7 @@ body{
     border: 1px solid #444444;
     width: 300px;
     margin: auto;
-    z-index: 9999;
+    z-index: 1;
     position: absolute;
     left: 50%;
     top: 70;
@@ -55,12 +55,13 @@ div button{
 }
 
 #remote-video, #local-video{
-    top: 0;
-    height: 100%;
-    width: 100%;
-    left: 0;
-    background-color: lightgray;
+    height: 80%;
+    width: 80%;
+    margin-left: 10%;
+    margin-left: 10%;
+    background-color: rgb(110, 110, 110);
     position: absolute;
+    border: #444444 solid 2px;
 }
 
 /* #local-video{

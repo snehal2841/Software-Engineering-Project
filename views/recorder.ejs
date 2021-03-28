@@ -3,9 +3,19 @@
 <title>Nova- Camera Mode | Record Video</title>
 
 <link rel="stylesheet" type="text/css" href="/css/recorder.css">
-
+<script src="https://code.jquery.com/jquery.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+  <meta charset="utf-8">
 <div class="container justify-content-centre" id="container">
-    <video id="gum" playsinline autoplay muted></video>
+    <!-- <video id="gum" playsinline autoplay muted></video> -->
+   <center> <div><i class="fa fa-circle text-danger" id="recordText"
+   style="display: none;"
+   ></i>&nbsp;<p id="recordT" style="display: none;
+      font-weight: bold;
+      ">Recording</p></div></center>
+
     <video id="recorded" playsinline></video>
 
     <div class="btns">
@@ -23,9 +33,9 @@
       </p>
     </div>
 
-    <div>
+    <!-- <div>
       <span id="errorMsg"></span>
-    </div>
+    </div> -->
 </div>
 
 

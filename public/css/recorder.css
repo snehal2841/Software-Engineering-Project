@@ -113,7 +113,15 @@ div button{
     background-color: lightgray;
     position: absolute;
 }
-
+@keyframes blinker {  
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+#recordText{
+ 
+    animation: blinker 1.5s cubic-bezier(.5, 0, 1, 1) infinite alternate;  
+    
+}
 /* #local-video{
     top: 60;
     width: 300;

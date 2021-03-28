@@ -12,6 +12,22 @@ const downloadButton = document.querySelector('button#download');
 
 
 recordButton.addEventListener('click', () => {
+  var x = document.getElementById("recordText");
+  if (x.style.display === "none") {
+    x.style.display = "inline";
+  }
+  else {
+    x.style.display = "none";
+  }
+   x=document.getElementById("recordT");
+   if (x.style.display === "none") {
+    x.style.display = "inline";
+  }
+  else {
+    x.style.display = "none";
+  }
+
+
   if (recordButton.textContent === 'Record') {
     startRecording();
   } else {

@@ -28,13 +28,13 @@
 
         <h1 style="margin-bottom:20px; color: rgb(95, 95, 95);">Recorded Videos</h1>
         <hr style="width: 20%;">
+        <% videos.forEach(function(video){ %>
         <div class="main"> 
-            <% videos.forEach(function(video){ %>
             <ul class="cards">
                 <li class="cards_item">
                     <div class="card">
                         <iframe id="rec-frame" allowfullscreen style="border:none;"
-                            src="https://www.youtube.com/embed/<%= video.vid_url_id %>"></iframe> 
+                            src="https://www.youtube.com/embed/<%= video.vid_url_id %>"></iframe>
                         <div class="card_content">
                             <div class="card_text">
                                 <table style="width:100%">
@@ -59,8 +59,8 @@
                     </div>
                 </li>   
             </ul>
-            <% }) %>
         </div>
+        <% }) %>
     </div>
 
     <%- include('./partials/footer') %>

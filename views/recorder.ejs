@@ -1,6 +1,7 @@
 <%- include('./partials/header') %>
 
 <title>Nova- Camera Mode | Record Video</title>
+<div class="record-con">
 
 <link rel="stylesheet" type="text/css" href="/css/recorder.css">
 <script src="https://code.jquery.com/jquery.min.js"></script>
@@ -10,7 +11,7 @@
   <meta charset="utf-8">
 <div class="container justify-content-centre" id="container">
     <!-- <video id="gum" playsinline autoplay muted></video> -->
-   <center> <div><i class="fa fa-circle text-danger" id="recordText"
+   <center> <div class="danger"><i class="fa fa-circle text-danger" id="recordText"
    style="display: none;"
    ></i>&nbsp;<p id="recordT" style="display: none;
       font-weight: bold;
@@ -19,7 +20,7 @@
     <video id="recorded" playsinline></video>
 
     <div class="btns">
-      <button class="btn btn-success" id="start">Start camera</button>
+      <button class="btn btn-success" id="start">Start Camera</button>
       <button class="btn btn-primary" id="record" disabled>Record</button>
       <button class="btn btn-primary" id="play" disabled>Play</button>
       <button class="btn btn-primary" id="save" disabled>Save</button>
@@ -31,14 +32,17 @@
       <p>
         Echo cancellation: <input type="checkbox" id="echoCancellation" />
       </p>
+    
     </div>
 
     <!-- <div>
       <span id="errorMsg"></span>
     </div> -->
+    
 </div>
 
 
   <script src="/js/recorder.js"></script>
-
+ 
+</div>
 <%- include('./partials/footer') %>

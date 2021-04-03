@@ -17,7 +17,7 @@ function createRoom(){
         console.log("Video recording with ID: ", id);
         hideModal();
         hideRemote();
-        getUserMedia({video: true, audio: true}, (stream)=>{
+        getUserMedia({video: true, audio: false}, (stream)=>{
             local_stream = stream;
             setLocalStream(local_stream);
         },(err)=>{

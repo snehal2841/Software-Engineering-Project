@@ -3,11 +3,12 @@
 let mediaRecorder;
 let recordedBlobs;
 
+
 const errorMsgElement = document.querySelector('span#errorMsg');
 const recordedVideo = document.querySelector('video#recorded');
 const recordButton = document.querySelector('button#record');
 const playButton = document.querySelector('button#play');
-const saveButton = document.querySelector('button#save');
+const saveButton = document.querySelector('input#save');
 const downloadButton = document.querySelector('button#download');
 
 
@@ -47,13 +48,14 @@ playButton.addEventListener('click', () => {
   recordedVideo.src = window.URL.createObjectURL(superBuffer);
   recordedVideo.controls = true;
   recordedVideo.play();
+
 });
 
-saveButton.addEventListener('click', () => {
-  const blob = new Blob(recordedBlobs, {type: 'video/mp4'});
-  const url = window.URL.createObjectURL(blob);
-  console.log(url);
- });
+// saveButton.addEventListener('click', () => {
+//   const blob = new Blob(recordedBlobs, {type: 'video/mp4'});
+//   const url = window.URL.createObjectURL(blob);
+//   console.log(url);
+//  });
 
 
 downloadButton.addEventListener('click', () => {

@@ -32,3 +32,13 @@
     margin: 20px 0;
     display: inline-block;}
 	.contant_box_404{ margin-top:-50px;}
+.link_404{
+    display: inline-block;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: rgb(2, 1, 58);
+    border-radius: 50px;
+    outline: whitesmoke;
+}

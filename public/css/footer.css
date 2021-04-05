@@ -5,13 +5,15 @@
 }
 
 .footer-distributed {
+  position: fixed;
+  bottom: 0;
   background-color: rgb(2, 1, 58);
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
   box-sizing: border-box;
   width: 100%;
   text-align: left;
   font: normal 16px sans-serif;
-  padding: 60px 50px;
+  padding: 10px 180px;
   /* position: fixed; */
 }
 

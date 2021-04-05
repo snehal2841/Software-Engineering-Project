@@ -1,5 +1,6 @@
 'use strict';
 
+
 let mediaRecorder;
 let recordedBlobs;
 
@@ -37,6 +38,24 @@ recordButton.addEventListener('click', () => {
     playButton.disabled = false;
     downloadButton.disabled = false;
     saveButton.disabled = false;
+
+    // var recordedChunks = [];
+    // var blob = new Blob(recordedChunks, {
+    //   type: 'video/webm'
+    // });
+    // var url = URL.createObjectURL(blob);
+    // var a = document.createElement('a');
+    // document.body.appendChild(a);
+    // a.style = 'display: none';
+    // a.href = url;
+    // a.download = 'test.webm';
+    // a.click();
+    // window.URL.revokeObjectURL(url);
+    // console.log(url);
+
+//     myurl = window1.URL.createObjectURL(myblob);
+// window2.URL.revokeObjectURL(myurl);
+// console.log(myurl);
   }
 });
 
@@ -48,7 +67,8 @@ playButton.addEventListener('click', () => {
   recordedVideo.src = window.URL.createObjectURL(superBuffer);
   recordedVideo.controls = true;
   recordedVideo.play();
-
+  //var clurl = cl.url(superBuffer);
+  console.log(recordedVideo.src);
 });
 
 // saveButton.addEventListener('click', () => {

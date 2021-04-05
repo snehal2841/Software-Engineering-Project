@@ -83,15 +83,7 @@ app.get("/record", (req, res) => {
 app.get("/videos",async(req,res) =>{
     const all_file = await cloudinary.api.resources();
     const files = await all_file.resources;
-    res.render('profile', {files});
-    // Video.find({}, function(err, allVideos) {
-    //     if(err) {
-    //         console.log(err);
-    //     } else {
-    //         //console.log(allVideos);
-    //         res.render("profile", {videos:allVideos});
-    //     }
-    // });
+    res.render('profile', {files});;
 }); 
 
 app.get("/newVid", (req,res) =>{
@@ -99,23 +91,10 @@ app.get("/newVid", (req,res) =>{
 });
 
 app.post("/videos",  upload.single('file') , async (req,res) =>{
-	// var vid_id=req.body.vid_id;
-	// var date=req.body.date;
-	// var location=req.body.location;
-	// var newVideo={vid_url_id: vid_url_id, vid_id: vid_id, date:date, location:location}
-    // Video.create(newVideo,function(err,newlyCreated){
-	// 	if(err){
-	// 		console.log(err);
-	// 	}
-	// 	else{
-	// 		res.redirect("/videos");
-	// 	}
-	// });
+
     const result = await cloudinary.uploader.upload(req.file.path, {resource_type: 'auto'});
 
-
     console.log("result: ", result);
-
 
     const post_details = {
         title: req.body.title,

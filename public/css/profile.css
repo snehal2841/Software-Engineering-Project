@@ -191,8 +191,8 @@ h1 {
 
 hr.divider {
     max-width: 4rem;
-    border-width: 0.13rem;
-    border-color: #a5a5a5;
+    border-width: 0.16rem;
+    border-color: #150666;
 }
 
 @media (min-width: 992px) {

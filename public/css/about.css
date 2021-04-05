@@ -77,10 +77,11 @@ h1,h2,h3,h4,h5,h6{
     color: #ffffff;
     background-color: rgb(2, 1, 58);
     border-radius: 50px;
-    outline: whitesmoke;
+    outline: whitesmoke;   
 }
 b{
     color: #ffffff;
+    
 }
 
    

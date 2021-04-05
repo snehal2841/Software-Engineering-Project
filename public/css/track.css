@@ -74,3 +74,13 @@ div button{
     background-color: #444444;
     position: absolute;
 } */
+
+@media (min-width: 992px) {
+    #mainNav {
+      box-shadow: 0.3rem 0.3rem 0.7rem rgba(0, 0, 0, 0.418);
+      background-color: rgb(12, 1, 70);
+    }
+    #mainNav.navbar-scrolled {
+        box-shadow: 0.3rem 0.3rem 0.7rem rgba(0, 0, 0, 0.418);
+    }
+}

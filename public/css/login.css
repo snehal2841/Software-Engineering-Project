@@ -14,7 +14,7 @@ body {
     font-family: 'Open Sans',sans-serif;
     width: 32%;
     max-width:525px;
-	min-height:530px;
+	min-height:600px;
     margin: 8rem auto;
     display: flex;
     border-radius: 0.3rem;
@@ -92,5 +92,15 @@ hr {
     }
     .inside_form .ForgotPassword {
         font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 992px) {
+    #mainNav {
+      box-shadow: 0.3rem 0.3rem 0.7rem rgba(0, 0, 0, 0.418);
+      background-color: rgb(12, 1, 70);
+    }
+    #mainNav.navbar-scrolled {
+        box-shadow: 0.3rem 0.3rem 0.7rem rgba(0, 0, 0, 0.418);
     }
 }

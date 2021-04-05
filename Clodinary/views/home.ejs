@@ -8,5 +8,12 @@
 </head>
 <body>
     <a href="/api/upload"><button>go</button></a>
+
+    <div class="container">
+        <% images.forEach(img=>{ %>
+            <img src=<%= img.url %> height="200" alt="">
+        <% }) %>
+    </div>
+
 </body>
 </html>

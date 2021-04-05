@@ -23,7 +23,13 @@
       <button class="btn btn-success" id="start">Start Camera</button>
       <button class="btn btn-primary" id="record" disabled>Record</button>
       <button class="btn btn-primary" id="play" disabled>Play</button>
-      <button class="btn btn-primary" id="save" disabled>Save</button>
+
+      <form action="/videos" method="POST" enctype="multipart/form-data">
+        <div class="field">
+          <input type="submit" name="file" class="button" id="save" value="Save">
+        </div>
+    </form>
+
       <button class="btn btn-warning" id="download" disabled>Download</button>
     </div>
 
@@ -41,6 +47,8 @@
     
 </div>
 
+<script src="/lodash/lodash.js" type="text/javascript"></script>
+<script src="/cloudinary-core/cloudinary-core.js" type="text/javascript"></script>
 
   <script src="/js/recorder.js"></script>
  

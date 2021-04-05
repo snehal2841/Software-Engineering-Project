@@ -152,4 +152,14 @@ div button{
     background-color: rgb(110, 110, 110);
     position: absolute;
     border: #444444 solid 2px;
+} */
+
+@media (min-width: 992px) {
+    #mainNav {
+      box-shadow: 0.3rem 0.3rem 0.7rem rgba(0, 0, 0, 0.418);
+      background-color: rgb(12, 1, 70);
+    }
+    #mainNav.navbar-scrolled {
+        box-shadow: 0.3rem 0.3rem 0.7rem rgba(0, 0, 0, 0.418);
+    }
 }

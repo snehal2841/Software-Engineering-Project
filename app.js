@@ -78,6 +78,10 @@ app.get("/about", (req, res) => {
 app.get("/record", (req, res) => {
     res.render("recorder");
 });
+app.get("/error", (req, res) => {
+    res.render("errormsg");
+});
+
 
 
 app.get("/videos",async(req,res) =>{

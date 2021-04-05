@@ -1,63 +1,121 @@
 const PRE = ""
 const SUF = ""
-var room_id;
+var room_id1;
+var room_id2;
 var getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
 var local_stream;
-const recordButton = document.querySelector('button#record');
-function createRoom(){
+const recordButton1 = document.querySelector('button#record1');
+const recordButton2 = document.querySelector('button#record2');
+function createRoom1(){
     console.log("Creating Room");
-    let room = document.getElementById("room-input").value;
-    if(room == " " || room == "")   {
-        alert("Please enter video ID");
+    let room1 = document.getElementById("room-input1").value;
+    if(room1 == " " || room1 == "")   {
+        alert("Please enter video ID for cam1");
         return;
     }
-    room_id = PRE+room+SUF;
-    let peer = new Peer(room_id);
-    peer.on('open', (id)=>{
-        console.log("Video recording with ID: ", id);
-        hideModal();
-        hideRemote();
-        getUserMedia({video: true, audio: false}, (stream)=>{
+    room_id1 = PRE+room1+SUF;
+    let peer1 = new Peer(room_id1);
+    peer1.on('open', (id1)=>{
+        console.log("Video recording with ID: ", id1);
+        hideModal1();
+        hideRemote1();
+        getUserMedia({video: true, audio: true}, (stream)=>{
             local_stream = stream;
-            setLocalStream(local_stream);
+            setLocalStream1(local_stream);
         },(err)=>{
             console.log(err);
         });
         notify("Waiting for video to connect.");
     });
-    peer.on('call',(call)=>{
+    peer1.on('call',(call)=>{
         call.answer(local_stream);
         call.on('stream',(stream)=>{
-            setRemoteStream(stream);
+            setRemoteStream1(stream);
         });
     });
 } 
 
-function setLocalStream(stream){
+function createRoom2(){
+    console.log("Creating Room");
+    let room2 = document.getElementById("room-input2").value;
+    if(room2 == " " || room2 == "")   {
+        alert("Please enter video ID for cam2");
+        return;
+    }
+    room_id2 = PRE+room2+SUF;
+    let peer2 = new Peer(room_id2);
+    peer2.on('open', (id2)=>{
+        console.log("Video recording with ID: ", id2);
+        hideModal2();
+        hideRemote2();
+        getUserMedia({video: true, audio: true}, (stream)=>{
+            local_stream = stream;
+            setLocalStream2(local_stream);
+        },(err)=>{
+            console.log(err);
+        });
+        notify("Waiting for video to connect.");
+    });
+    peer2.on('call',(call)=>{
+        call.answer(local_stream);
+        call.on('stream',(stream)=>{
+            setRemoteStream2(stream);
+        });
+    });
+}
+//====================1=====================================================
+function setLocalStream1(stream){
     
-    let video = document.getElementById("local-video");
+    let video = document.getElementById("local-video1");
     video.srcObject = stream;
     video.muted = true;
     video.play();
 }
-function setRemoteStream(stream){
+function setRemoteStream1(stream){
    
-    let video = document.getElementById("remote-video");
+    let video = document.getElementById("remote-video1");
     video.srcObject = stream;
     video.play();
 }
 
-function hideModal(){
-    document.getElementById("entry-modal").hidden = true;
+function hideModal1(){
+    document.getElementById("entry-modal1").hidden = true;
 }
 
-function hideLocal(){
-    document.getElementById("local-video").hidden = true;
+function hideLocal1(){
+    document.getElementById("local-video1").hidden = true;
 }
 
-function hideRemote(){
-    document.getElementById("remote-video").hidden = true;
+function hideRemote1(){
+    document.getElementById("remote-video1").hidden = true;
 }
+//==========================================2====================================
+function setLocalStream2(stream){
+    
+    let video = document.getElementById("local-video2");
+    video.srcObject = stream;
+    video.muted = true;
+    video.play();
+}
+function setRemoteStream2(stream){
+   
+    let video = document.getElementById("remote-video2");
+    video.srcObject = stream;
+    video.play();
+}
+
+function hideModal2(){
+    document.getElementById("entry-modal2").hidden = true;
+}
+
+function hideLocal2(){
+    document.getElementById("local-video2").hidden = true;
+}
+
+function hideRemote2(){
+    document.getElementById("remote-video2").hidden = true;
+}
+
 
 function notify(msg){
     let notification = document.getElementById("notification");
@@ -68,26 +126,52 @@ function notify(msg){
     }, 3000);
 }
 
-function joinRoom(){
+function joinRoom1(){
     console.log("Tracking Video")
-    let room = document.getElementById("room-input").value;
-    if(room == " " || room == "")   {
-        alert("Please enter Video ID");
+    let room1 = document.getElementById("room-input1").value;
+    if(room1 == " " || room1 == "")   {
+        alert("Please enter Video ID for cam1");
         return;
     }
-    room_id = PRE+room+SUF;
-    hideModal();
-    hideLocal();
-    let peer = new Peer();
-    peer.on('open', (id)=>{
-        console.log("Connected with Id: "+id);
-        getUserMedia({video: true, audio: false}, (stream)=>{
+    room_id1 = PRE+room1+SUF;
+    //hideModal();
+    hideLocal1();
+    let peer1 = new Peer();
+    peer1.on('open', (id1)=>{
+        console.log("Connected with Id: "+id1);
+        getUserMedia({video: true, audio: true}, (stream)=>{
             local_stream = stream;
-            setLocalStream(local_stream);
+            setLocalStream1(local_stream);
             notify("Tracking Video");
-            let call = peer.call(room_id, stream);
+            let call = peer1.call(room_id1, stream);
             call.on('stream', (stream)=>{
-                setRemoteStream(stream);
+                setRemoteStream1(stream);
+            });
+        }, (err)=>{
+            console.log(err);
+        });
+    });
+}
+
+function joinRoom2(){
+    console.log("Tracking Video")
+    let room2 = document.getElementById("room-input2").value;
+    if(room2 == " " || room2 == "")   {
+        alert("Please enter Video ID for cam2");
+        return;
+    }
+    room_id2 = PRE+room2+SUF;
+    hideLocal2();
+    let peer2 = new Peer();
+    peer2.on('open', (id2)=>{
+        console.log("Connected with Id: "+id2);
+        getUserMedia({video: true, audio: true}, (stream)=>{
+            local_stream = stream;
+            setLocalStream2(local_stream);
+            notify("Tracking Video");
+            let call = peer2.call(room_id2, stream);
+            call.on('stream', (stream)=>{
+                setRemoteStream2(stream);
             });
         }, (err)=>{
             console.log(err);

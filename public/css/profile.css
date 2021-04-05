@@ -6,7 +6,7 @@
     /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to bottom right, #ACBB78, #F7F8F8) fixed;
     font-family: 'Muli', sans-serif;
-    display: block;
+    display: flex;
     align-items: center;
     justify-content: start;
     flex-direction: column;
@@ -20,37 +20,79 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 4.5rem 10rem 2rem;
+    margin: 8rem 10rem 2rem;
     overflow: hidden;
-}
-
-.course h6 {
-    opacity: 0.6;
-    margin: 0;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+    width: 65%;
 }
 
 .course-preview {
-    background: url(https://raw.githubusercontent.com/khadkamhn/day-01-login-form/master/img/bg.jpg) no-repeat center;
+    /* width: 10%; */
     color: #fff;
-    max-width: 20%;
+}
+
+.course-preview img {
+    height: 230px;
+    width: 220px;
 }
 
 .course-info {
     padding: 30px;
-    width: 100%;
+    /* width: 90%; */
 }
 
 .course .td-1 {
     padding-left: 2rem;
 }
+
 .course .td-3 {
     padding-left: 5rem;
 }
 
 .course table td {
     padding-bottom: 6px;
+}
+
+.col-md-3, .col-md-9 {
+    padding-left: 0rem !important;
+    padding-right: 0rem !important;
+}
+
+@media (max-width: 900px) {
+    .course {
+        width: 80% !important;
+    }
+    .course .td-3 {
+        padding-left: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .course {
+        width: 50% !important;
+    }
+    .course-preview img {
+        height: auto;
+        width: 100%;
+    }
+    .course-info {
+        font-size: 0.9rem !important;
+    }
+    .course .td-1 {
+        padding-left: 1rem;
+    }
+    
+    .course .td-3 {
+        padding-left: 1rem;
+    }
+}
+
+@media (max-width: 549px) {
+    .course {
+        width: 70% !important;
+    }
+    .course-info {
+        font-size: 0.7rem !important;
+    }
 }
 
 /*------------------recording Video Cards------------------*/
@@ -84,6 +126,7 @@ h1 {
 }
 
 .cards_item {
+    width: 100%;
     display: flex;
     padding: 1rem;
     position: relative;
@@ -146,10 +189,16 @@ h1 {
     text-align: center;
 }
 
+hr.divider {
+    max-width: 4rem;
+    border-width: 0.13rem;
+    border-color: #a5a5a5;
+}
+
 @media (min-width: 992px) {
     #mainNav {
-      box-shadow: 0.3rem 0.3rem 0.7rem rgba(0, 0, 0, 0.418);
-      background-color: rgb(12, 1, 70);
+        box-shadow: 0.3rem 0.3rem 0.7rem rgba(0, 0, 0, 0.418);
+        background-color: rgb(12, 1, 70);
     }
     #mainNav.navbar-scrolled {
         box-shadow: 0.3rem 0.3rem 0.7rem rgba(0, 0, 0, 0.418);

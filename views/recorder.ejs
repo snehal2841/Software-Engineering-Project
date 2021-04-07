@@ -23,27 +23,21 @@
       <button class="btn btn-success" id="start">Start Camera</button>
       <button class="btn btn-primary" id="record" disabled>Record</button>
       <button class="btn btn-primary" id="play" disabled>Play</button>
-
-      <form action="/videos" method="POST" enctype="multipart/form-data">
-        <div class="field">
-          <input type="submit" name="file" class="button" id="save" value="Save">
-        </div>
-    </form>
-
+      <button class="btn btn-success" id="save" disabled>Save</button>
       <button class="btn btn-warning" id="download" disabled>Download</button>
     </div>
 
     <div>
-      <h4>Media Stream Constraints options</h4>
+      <!-- <h4>Media Stream Constraints options</h4> -->
       <p>
         Echo cancellation: <input type="checkbox" id="echoCancellation" />
       </p>
     
     </div>
 
-    <!-- <div>
+    <div>
       <span id="errorMsg"></span>
-    </div> -->
+    </div>
     
 </div>
 

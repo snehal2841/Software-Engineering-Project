@@ -41,7 +41,7 @@
                 <% files.forEach(file=>{ %>
                     <li class="cards_item">
                         <div class="card">
-                            <iframe id="rec-frame" allowfullscreen style="border:none;" src='<%= file.url %>'></iframe>
+                            <!-- <iframe id="rec-frame" allowfullscreen style="border:none;" src='<%= file.url %>'></iframe> -->
                             <div class="card_content">
                                 <div class="card_text">
                                     <table style="width:100%">
@@ -51,6 +51,11 @@
                                             <td class="td3">
                                                 <%= file.public_id %>
                                             </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Video-URL </td>
+                                            <td>: </td>
+                                            <td class="td3"><a href="<%= file.url %>" target="_blank">Watch </a></td>
                                         </tr>
                                         <tr>
                                             <td>Date/Time </td>

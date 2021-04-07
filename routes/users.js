@@ -25,6 +25,7 @@ router.post('/signup',async(req,res,next)=>{
     });
     }catch(e){
         req.flash('error',e.message);
+        console.log(e);
         res.redirect('signup');
     }
 });

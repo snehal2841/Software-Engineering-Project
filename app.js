@@ -87,7 +87,7 @@ app.get("/error", (req, res) => {
 app.get("/videos",async(req,res) =>{
     const all_file = await cloudinary.api.resources();
     const files = await all_file.resources;
-    res.render('profile', {files});;
+    res.render('profile', {files});
 }); 
 
 app.get("/newVid", (req,res) =>{
@@ -100,10 +100,10 @@ app.post("/videos",  upload.single('file') , async (req,res) =>{
 
     console.log("result: ", result);
 
-    const post_details = {
-        title: req.body.title,
-        image: result.public_id
-    }
+    // const post_details = {
+    //     title: req.body.title,
+    //     image: result.public_id
+    // }
 
     //res.status(200).json({post_details});
     res.redirect('/videos');

@@ -13,7 +13,7 @@ nav #mainNav #navBar {
 }
 
 #mainNav {
-    padding: 1rem !important;
+    padding: 0.8rem 1rem !important;
 }
 
 #mainNav.navbar-scrolled {
@@ -23,10 +23,15 @@ nav #mainNav #navBar {
 
 .navbar .navbar-brand {
     font-size: 2rem !important;
-    margin-right: 10rem !important;
+    margin-right: 7rem !important;
     padding-top: 0 !important;
     padding-right: 5rem !important;
     padding-bottom: 0 !important;
+}
+
+.navbar .navlogo {
+    width: 40px;
+    height: 40px;
 }
 
 .navbar .navbar-brand:hover {

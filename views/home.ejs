@@ -46,7 +46,12 @@
             <div class="row">
                
                 <div class="col-lg-3 col-md-6 text-center">
+                    <% if (!currentUser){ %> 
+                        <a href="/error" style="text-decoration:none"> 
+                        <% }
+                    else{ %>
                     <a href="/record" style="text-decoration:none">
+                        <% } %> 
                     <div class="mt-5">
                         <i class="fas fa-4x fa-camera text-primary mb-4"></i>
                         <h3 class="h4 mb-2"  style="color:black">Camera Mode</h3>
@@ -55,7 +60,12 @@
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
+                    <% if (!currentUser){ %> 
+                        <a href="/error" style="text-decoration:none"> 
+                        <% }
+                    else{ %>
                     <a href="/track" style="text-decoration:none">
+                        <% } %> 
                     <div class="mt-5">
                         <i class="fas fa-4x fa-laptop-code text-primary mb-4"></i>
                         <h3 class="h4 mb-2" style="color:black">Live-Tracking</h3>

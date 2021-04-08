@@ -76,7 +76,7 @@ app.get("/about", (req, res) => {
 });
 
 
-app.get("/record",isLoggedIn ,(req, res) => {
+app.get("/record",(req, res) => {
     res.render("recorder");
 });
 app.get("/error", (req, res) => {
@@ -110,7 +110,7 @@ app.post("/videos",  upload.single('file') , async (req,res) =>{
     res.redirect('/videos');
 });
 
-app.get("/track", isLoggedIn,(req,res) =>{
+app.get("/track", (req,res) =>{
     res.render("track");
  });
 

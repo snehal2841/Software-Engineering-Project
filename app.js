@@ -16,6 +16,7 @@ const Video = require("./models/video");
 // const fs=require("fs");
 
 const userRoutes = require("./routes/users");
+const { isLoggedIn } = require("./middleware/usermiddleware");
 require('dotenv').config();
 
 //PASSPORT CONFIGURATION
@@ -75,7 +76,7 @@ app.get("/about", (req, res) => {
 });
 
 
-app.get("/record", (req, res) => {
+app.get("/record",isLoggedIn ,(req, res) => {
     res.render("recorder");
 });
 app.get("/error", (req, res) => {
@@ -109,7 +110,7 @@ app.post("/videos",  upload.single('file') , async (req,res) =>{
     res.redirect('/videos');
 });
 
-app.get("/track",(req,res) =>{
+app.get("/track", isLoggedIn,(req,res) =>{
     res.render("track");
  });
 

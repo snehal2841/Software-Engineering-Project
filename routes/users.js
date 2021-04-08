@@ -37,6 +37,8 @@ router.get('/login',(req,res)=>{
 router.post('/login',passport.authenticate("local",
 {
     failureFlash : true,
+    failureMessage: 'Please provide correct credentials',
+    failWithError: 'Your username or password might be wrong',
     failureRedirect: "/login"
     }),(req,res)=>{
         req.flash('success','Welcome Back!');

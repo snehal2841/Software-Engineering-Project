@@ -2,19 +2,21 @@
 
     <link rel="stylesheet" type="text/css" href="/css/login.css">
 
+    
+
     <div class="inside_form">
         <div class="overlay">
-            <form action="/login" method="POST" class="validated-form" novalidate>
+            <form action="/login" name="myForm" method="POST" class="validated-form" novalidate>
                 <div>
                     <h2>SIGN IN</h2>
                 </div>
                 <div class="mb-3">
                     <label class="form-label" for="username">USERNAME</label>
-                    <input class="form-control" type="text" id="username" placeholder="username" name="username" required>
+                        <input class="form-control" type="text" id="username" placeholder="username" name="username" required title="Please input the valid username">
                 </div>
                 <div class="mb-3">
                     <label class="form-label" for="password">PASSWORD</label>
-                    <input class="form-control" type="password" id="password" placeholder="password" name="password" required>
+                    <input class="form-control" type="password" id="password" placeholder="password" name="password" required title="Please input the password">        
                 </div>
                 <div class="mb-3">
                     <input id="check" type="checkbox" class="check" checked>
@@ -32,6 +34,9 @@
             </form>
         </div>
     </div>
+
+    <script src="/js/login.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
 
     <%- include('./partials/footer') %>

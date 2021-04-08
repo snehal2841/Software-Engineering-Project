@@ -4,7 +4,7 @@
 
     <div class="inside_form">
         <div class="overlay">
-            <form action="/signup" method="POST" class="validated-form" novalidate>
+            <form action="/signup" method="POST" class="validated-form" validate>
                 <div>
                     <h2>SIGN UP</h2>
                 </div>
@@ -14,7 +14,8 @@
                 </div>
                 <div class="mb-3">
                     <label class="form-label" for="email">EMAIL ADDRESS</label>
-                    <input class="form-control" type="email" id="email" placeholder="email-id" name="email" required>
+                    <input class="form-control" type="email" id="email" placeholder="email-id" name="email" required
+                    title="Please provide valid email address">
                 </div>
                 <div class="mb-3">
                     <label class="form-label" for="password">PASSWORD</label>
@@ -32,5 +33,8 @@
             </form>
         </div>
     </div>
+
+    <script src="/js/signup.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
     <%- include('./partials/footer') %>

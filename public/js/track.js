@@ -19,7 +19,7 @@ function createRoom1(){
         console.log("Video recording with ID: ", id1);
         hideModal1();
         hideRemote1();
-        getUserMedia({video: true, audio: true}, (stream)=>{
+        getUserMedia({video: true, audio: false}, (stream)=>{
             local_stream = stream;
             setLocalStream1(local_stream);
         },(err)=>{
@@ -48,7 +48,7 @@ function createRoom2(){
         console.log("Video recording with ID: ", id2);
         hideModal2();
         hideRemote2();
-        getUserMedia({video: true, audio: true}, (stream)=>{
+        getUserMedia({video: true, audio: false}, (stream)=>{
             local_stream = stream;
             setLocalStream2(local_stream);
         },(err)=>{
@@ -139,7 +139,7 @@ function joinRoom1(){
     let peer1 = new Peer();
     peer1.on('open', (id1)=>{
         console.log("Connected with Id: "+id1);
-        getUserMedia({video: true, audio: true}, (stream)=>{
+        getUserMedia({video: true, audio: false}, (stream)=>{
             local_stream = stream;
             setLocalStream1(local_stream);
             notify("Tracking Video");
@@ -165,7 +165,7 @@ function joinRoom2(){
     let peer2 = new Peer();
     peer2.on('open', (id2)=>{
         console.log("Connected with Id: "+id2);
-        getUserMedia({video: true, audio: true}, (stream)=>{
+        getUserMedia({video: true, audio: false}, (stream)=>{
             local_stream = stream;
             setLocalStream2(local_stream);
             notify("Tracking Video");

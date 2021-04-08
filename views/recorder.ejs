@@ -1,50 +1,53 @@
 <%- include('./partials/header') %>
 
-<title>Nova- Camera Mode | Record Video</title>
-<div class="record-con">
+  <title>Nova- Camera Mode | Record Video</title>
 
-<link rel="stylesheet" type="text/css" href="/css/recorder.css">
-<script src="https://code.jquery.com/jquery.min.js"></script>
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+  <link rel="stylesheet" type="text/css" href="/css/recorder.css">
+  <script src="https://code.jquery.com/jquery.min.js"></script>
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
+  <!-- <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css" /> -->
   <meta charset="utf-8">
-<div class="container justify-content-centre" id="container">
-    <!-- <video id="gum" playsinline autoplay muted></video> -->
-   <center> <div class="danger"><i class="fa fa-circle text-danger" id="recordText"
-   style="display: none;"
-   ></i>&nbsp;<p id="recordT" style="display: none;
-      font-weight: bold;
-      ">Recording</p></div></center>
 
-    <video id="recorded" playsinline></video>
+  <div class="record-con">
+    <div class="container justify-content-centre" id="container">
+      <!-- <video id="gum" playsinline autoplay muted></video> -->
+      <center>
+        <div class="danger">
+          <i class="fa fa-circle text-danger" id="recordText" style="display: none;"></i>&nbsp;
+          <p id="recordT" style="display: none; font-weight: bold;">Recording</p>
+        </div>
+      </center>
 
-    <div class="btns">
-      <button class="btn btn-success" id="start">Start Camera</button>
-      <button class="btn btn-primary" id="record" disabled>Record</button>
-      <button class="btn btn-primary" id="play" disabled>Play</button>
-      <button class="btn btn-success" id="save" disabled>Save</button>
-      <button class="btn btn-warning" id="download" disabled>Download</button>
+      <video id="recorded" playsinline></video>
+
+      <div class="btns">
+        <button class="btn btn-success" id="start">Start Camera</button>
+        <button class="btn btn-primary" id="record" disabled>Record</button>
+        <button class="btn btn-primary" id="play" disabled>Play</button>
+        <button class="btn btn-success" id="save" disabled>Save</button>
+        <button class="btn btn-warning" id="download" disabled>Download</button>
+      </div>
+
+      <div>
+        <!-- <h4>Media Stream Constraints options</h4> -->
+        <p>
+          Echo cancellation: <input type="checkbox" id="echoCancellation" />
+        </p>
+
+      </div>
+
+      <div>
+        <span id="errorMsg"></span>
+      </div>
+
     </div>
 
-    <div>
-      <!-- <h4>Media Stream Constraints options</h4> -->
-      <p>
-        Echo cancellation: <input type="checkbox" id="echoCancellation" />
-      </p>
-    
-    </div>
+  </div>
 
-    <div>
-      <span id="errorMsg"></span>
-    </div>
-    
-</div>
-
-<script src="/lodash/lodash.js" type="text/javascript"></script>
-<script src="/cloudinary-core/cloudinary-core.js" type="text/javascript"></script>
+  <script src="/lodash/lodash.js" type="text/javascript"></script>
+  <script src="/cloudinary-core/cloudinary-core.js" type="text/javascript"></script>
 
   <script src="/js/recorder.js"></script>
- 
-</div>
-<%- include('./partials/footer') %>
+  <%- include('./partials/footer') %>

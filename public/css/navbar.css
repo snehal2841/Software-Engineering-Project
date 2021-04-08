@@ -43,7 +43,7 @@ nav #mainNav #navBar {
     font-weight: 80 !important;
 }
 
-@media (max-width:400px) {
+@media (max-width:417px) {
     .navbar .navbar-brand {
         font-size: 2rem !important;
         margin-right: 1rem !important;

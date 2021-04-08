@@ -9,7 +9,7 @@ const errorMsgElement = document.querySelector('span#errorMsg');
 const recordedVideo = document.querySelector('video#recorded');
 const recordButton = document.querySelector('button#record');
 const playButton = document.querySelector('button#play');
-const saveButton = document.querySelector('input#save');
+const saveButton = document.querySelector('button#save');
 const downloadButton = document.querySelector('button#download');
 
 
@@ -127,7 +127,7 @@ function startRecording() {
 }
 
 function stopRecording() {
-  mediaRecorder.stop();
+  mediaRecorder.stop()
 }
 
 function handleSuccess(stream) {
@@ -145,7 +145,7 @@ async function init(constraints) {
     handleSuccess(stream);
   } catch (e) {
     console.error('navigator.getUserMedia error:', e);
-    errorMsgElement.innerHTML = `navigator.getUserMedia error:${e.toString()}`;
+    //errorMsgElement.innerHTML = `navigator.getUserMedia error:${e.toString()}`;
   }
 }
 

@@ -68,6 +68,9 @@ body {
     display: flex;
     justify-content: space-around;
 }
+.inside_form .ForgotPassword a{
+    color: white;
+}
 
 hr {
     height: 1px;

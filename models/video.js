@@ -16,9 +16,7 @@ const VideoSchema = new Schema({
 			ref: "User"
 		},
 		username: String
-	},
-    date: Date,
-    location: String
+	}
 });
 
 module.exports = mongoose.model('Video', VideoSchema);

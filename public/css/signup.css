@@ -64,6 +64,10 @@ body {
     /* z-index: 1; */
 }
 
+.inside_form .Already a{
+    color: white;
+}
+
 .inside_form .Already {
     display: flex;
     justify-content: space-around;

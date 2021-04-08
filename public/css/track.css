@@ -1,10 +1,20 @@
-body{
+body {
     margin: 0;
     margin-top: 100px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.title{
+body {
+    /* background-color: rgb(160, 197, 252) !important; */
+    background: #F7F8F8;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ACBB78, #F7F8F8);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom right, #ACBB78, #F7F8F8) fixed;
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.title {
     top: 0;
     width: 100%;
     z-index: 1;
@@ -12,30 +22,30 @@ body{
     position: absolute;
     background-color: #444444;
     color: white;
-   margin: 0;
-   padding: 5px;
+    margin: 0;
+    padding: 5px;
 }
 
-.cam-1-2{
-    margin-top: 0px;
+.cam-1-2 {
+    margin-top: 8rem;
 }
 
-.entry-modal1{
+.entry-modal1 {
     border: 1px solid #444444;
     width: 300px;
     z-index: 0;
     position: absolute;
-    left: 50%;
+    right: 50%;
     top: 70;
     padding: 5px;
     color: #fff;
     background-color: #444444;
     text-align: center;
-    margin-left: -30%;
-    margin-right: 95%;
+    margin-left: 15%;
+    margin-right: 15%;
 }
 
-.entry-modal2{
+.entry-modal2 {
     border: 1px solid #444444;
     width: 300px;
     z-index: 0;
@@ -50,7 +60,7 @@ body{
     margin-left: 15%;
 }
 
-
+/*
 .entry-modal3{
     border: 1px solid #444444;
     width: 300px;
@@ -80,10 +90,10 @@ body{
     text-align: center;
     margin-right: 15%;
     margin-left: 15%;
-    margin-top: 580px;
-}
+    margin-top: 580px;   
+}*/
 
-#notification{
+#notification {
     position: absolute;
     z-index: 1;
     text-align: center;
@@ -95,42 +105,65 @@ body{
     background-color: orange;
 }
 
-
-.room-input1, .room-input2, .room-input3, .room-input4{
-  border: none;
-  padding:5px;
+.room-input1, .room-input2, .room-input3, .room-input4 {
+    border: none;
+    padding: 5px;
 }
 
-div button{
+div button {
     margin: 5px;
     padding: 5px;
 }
 
-#remote-video1, #local-video1{
+#remote-video1 {
     height: 400px;
-    width: 49%;
+    width: 47%;
     z-index: 0;
-    margin-right: 25%;
+    margin-right: 50%;
     margin-left: 1%;
-    margin-top: 152px;
+    margin-top: 170px;
     background-color: rgb(110, 110, 110);
     position: absolute;
     border: #444444 solid 2px;
 }
 
-#remote-video2, #local-video2{
+#local-video1 {
     height: 400px;
-    width: 49%;
+    width: 47%;
     z-index: 0;
-    margin-left: 50%;
-    margin-right: 1%;
-    margin-top: 152px;
+    margin-right: 50%;
+    margin-left: 1%;
+    margin-top: 610px;
     background-color: rgb(110, 110, 110);
     position: absolute;
     border: #444444 solid 2px;
 }
 
-#remote-video3, #local-video3{
+#remote-video2 {
+    height: 400px;
+    width: 47%;
+    z-index: 0;
+    margin-left: 52%;
+    margin-right: 1%;
+    margin-top: 170px;
+    background-color: rgb(110, 110, 110);
+    position: relative;
+    border: #444444 solid 2px;
+}
+
+#local-video2 {
+    height: 400px;
+    width: 47%;
+    z-index: 0;
+    margin-left: 52%;
+    margin-right: 1%;
+    margin-top: 34px;
+    background-color: rgb(110, 110, 110);
+    position: relative;
+    border: #444444 solid 2px;
+}
+
+/* #remote-video3, #local-video3{
     height: 400px;
     width: 49%;
     z-index: 0;
@@ -138,7 +171,7 @@ div button{
     margin-left: 1%;
     margin-top: 580px;
     background-color: rgb(110, 110, 110);
-    position: absolute;
+    position: relative;
     border: #444444 solid 2px;
 }
 
@@ -150,14 +183,90 @@ div button{
     margin-right: 1%;
     margin-top: 580px;
     background-color: rgb(110, 110, 110);
-    position: absolute;
+    position: relative;
     border: #444444 solid 2px;
-} */
+}  */
+
+@media (max-width: 880px) {
+    .entry-modal1 {
+        border: 1px solid #444444;
+        width: 80%;
+        z-index: 0;
+        position: static;
+        right: -17%;
+        top: 70;
+        padding: 5px;
+        color: #fff;
+        background-color: #444444;
+        text-align: center;
+        margin-left: 5%;
+        margin-right: 15%;
+    }
+    .entry-modal2 {
+        border: 1px solid #444444;
+        width: 80%;
+        z-index: 0;
+        position: static;
+        left: 50%;
+        top: 70;
+        padding: 5px;
+        color: #fff;
+        background-color: #444444;
+        text-align: center;
+        margin-right: 15%;
+        margin-left: 5%;
+    }
+    #remote-video1 {
+        height: 400px;
+        width: 90%;
+        z-index: 0;
+        margin-right: 1%;
+        margin-left: 1%;
+        margin-top: 30px;
+        background-color: rgb(110, 110, 110);
+        position: absolute;
+        border: #444444 solid 2px;
+    }
+    #local-video1 {
+        height: 400px;
+        width: 90%;
+        z-index: 0;
+        margin-right: 1%;
+        margin-left: 1%;
+        margin-top: 470px;
+        margin-bottom: 50px;
+        background-color: rgb(110, 110, 110);
+        position: relative;
+        border: #444444 solid 2px;
+    }
+    #remote-video2 {
+        height: 400px;
+        width: 90%;
+        z-index: 0;
+        margin-left: 1%;
+        margin-right: 1%;
+        margin-top: 30px;
+        background-color: rgb(110, 110, 110);
+        position: relative;
+        border: #444444 solid 2px;
+    }
+    #local-video2 {
+        height: 400px;
+        width: 90%;
+        z-index: 0;
+        margin-left: 1%;
+        margin-right: 1%;
+        margin-top: 34px;
+        background-color: rgb(110, 110, 110);
+        position: relative;
+        border: #444444 solid 2px;
+    }
+}
 
 @media (min-width: 992px) {
     #mainNav {
-      box-shadow: 0.3rem 0.3rem 0.7rem rgba(0, 0, 0, 0.418);
-      background-color: rgb(12, 1, 70);
+        box-shadow: 0.3rem 0.3rem 0.7rem rgba(0, 0, 0, 0.418);
+        background-color: rgb(12, 1, 70);
     }
     #mainNav.navbar-scrolled {
         box-shadow: 0.3rem 0.3rem 0.7rem rgba(0, 0, 0, 0.418);

@@ -1,4 +1,4 @@
-# Software Engineering Project
+# Nova - The Video-Surveillance System
 
 ## Demo Video 
 You can watch the demo video of this project at https://www.youtube.com/watch?v=yuwaMlLbhzg&feature=youtu.be
@@ -36,9 +36,11 @@ node app.js
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------
   
-## About our 'Nova-Video-Surveillance'   
+## About our 'Nova-Video-Surveillance' 
   
 This website is meant for the people who want to keep an eye on their house when they are not present there. It is the best way to utilise your old phone or pc as a cctv-camera and your existing device to watch the view of your house. Nova offers you two different options which you can use to keep an eye on your house being at any remote location. First is to just place your old phone at the desired place of your home and just switch on the recording mode in it, Second is to track the home live from your existing device.
+  
+
 ----------------------------------------------------------------------------------------------------------------------------------------------------
   
 ## What was our inspiration for 'Nova' ?

@@ -76,7 +76,7 @@ Well, Now you can. This system gives you the way to utilise your old phone/pc as
   <tr>
      <td align="center"><a href="https://github.com/yuktagopalani"><img src="https://avatars.githubusercontent.com/u/59793009?v=4" width="200px;" alt=""/><br /><sub><b>Yukta</b></sub></a><br /></td>
     <td align="center"><a href="https://github.com/snehal2841"><img src="https://avatars.githubusercontent.com/u/58397197?s=400&u=2235e19fae70bb10e7fff4dbbb7d2ee63f73cdd9&v=4" width="200px;" alt=""/><br /><sub><b>Snehal</b></sub></a><br /></td>
-     <td align="center"><a href="https://github.com/Taniya0501"><img src="https://avatars.githubusercontent.com/u/61988647?v=4" width="200px;" alt=""/><br /><sub><b>Alka</b></sub></a><br /></td>
+     <td align="center"><a href="https://github.com/Taniya0501"><img src="https://avatars.githubusercontent.com/u/61988647?v=4" width="200px;" alt=""/><br /><sub><b>Tanya</b></sub></a><br /></td>
  
  </tr>
 </table>

@@ -35,25 +35,35 @@ node app.js
 </table>
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------
+  
 ## About our 'Nova-Video-Surveillance'   
+  
 This website is meant for the people who want to keep an eye on their house when they are not present there. It is the best way to utilise your old phone or pc as a cctv-camera and your existing device to watch the view of your house. Nova offers you two different options which you can use to keep an eye on your house being at any remote location. First is to just place your old phone at the desired place of your home and just switch on the recording mode in it, Second is to track the home live from your existing device.
 ----------------------------------------------------------------------------------------------------------------------------------------------------
+  
 ## What was our inspiration for 'Nova' ?
+  
 Having Plans???  
 But can’t leave your home alone? 
 Well, Now you can. This system gives you the way to utilise your old phone/pc as a cctv camera and keep an eye on your home through the existing one.
+  
 ----------------------------------------------------------------------------------------------------------------------------------------------------
+  
 ## What Challenges :bulb: did we run into?
 1. Coming to the idea of surveillance without using an IOT device was a challenge.
 2. Storing the videos at the backend.
+  
 ----------------------------------------------------------------------------------------------------------------------------------------------------
+  
 ## What Accomplishments are we most proud of?
 At the end, we were able to track any device from any location. Device can be tracked while travelling also and all these things need just a phone/pc.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------
+  
 ## What did we learn?
 We have learnt to use Cloudinary for managing the videos.
 Taking advantage of media-recorder api for capturing view.
+  
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 ## Tech stack
 
